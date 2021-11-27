@@ -5,77 +5,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./image/favicon.png">
     <title>Checkpoint2 - Formulário</title>
 </head>
 <body>
     <main>
-        <h1>Registro de visitação</h1>
+        <div class="caixaTitulo"><h1 class="titulo">REGISTRO DE VISITAÇÃO</h1></div>
         <article>
             <form action="/formulario" method="post">
+                <section>
+                    <div class="conteinerRegistro">
+                        <label class="tituloRegistro" for="nome">Nome:</label>
+                        <input class="registro" id="nome" name="nome" placeholder="Ex: Carlos" maxlength="100" required>
+                    </div>
+                    <div class="conteinerRegistro">
+                        <label class="tituloRegistro" for="email">E-Mail:</label>
+                        <input class="registro" id="email" type="email" nome="email" placeholder="Ex: joaodasilva@exemple.com" required>
+                    </div>
+                    <div class="conteinerRegistro">
+                        <label class="tituloRegistro" for="telefone">Telefone:</label>
+                        <input class="registro" id="telefone" type="tel" nome="telefone" placeholder="Ex: (99) 91234-5678">
+                    </div>
+                    <div class="conteinerRegistro">
+                        <label class="tituloRegistro" for="dataNascimento">Data de Nascimento:</label>
+                        <input class="registro" id="dataNascimento" type="date" nome="dataNascimento">
+                    </div>
+                </section>
+                
                 <div>
-                    <label for="nome">Nome:</label>
-                    <input id="nome" name="nome" placeholder="nome" required>
-                </div>
-                <div>
-                    <label for="email">E-Mail:</label>
-                    <input id="email" type="email" nome="email" placeholder="email" required>
-                </div>
-                <div>
-                    <label for="telefone">Telefone:</label>
-                    <input id="telefone" type="tel" nome="telefone">
-                </div>
-                <div>
-                    <label for="dataNascimento">Data de Nascimento:</label>
-                    <input id="dataNascimento" type="date" nome="dataNascimento">
-                </div>
-                <div>
-                    <label for=""></label>
-                    <input type="text">
-                </div>
-                <div>
-                    <label for="maiorMenorIdade">Tem Mais que 18 anos?</label>
-                    <input id="sim" type="radio" name="maiorMenorIdade" value="sim">
-                    <label for="sim">Sim</label>
-                    <input id="nao" type="radio" name="maiorMenorIdade" value="nao" checked>
-                    <label for="nao">Não</label>
-                </div>
-                <div>
-                    <div><label for=""><h3>Ponto de Interesse da cidade:</h3></label></div><br>
+                    <section>
+                        <h2>Tem mais de 18 anos?</h2>
                     <div>
-                        <input id="" type="radio" name="" >
-                        <label for="">Moinho da Castrolanda</label>  <br>                  
+                        <input id="sim" type="radio" name="maiorMenorIdade" value="sim">
+                        <label for="sim">Sim</label>
+                    </div>
+                    
+                    <div>
+                        <input id="nao" type="radio" name="maiorMenorIdade" value="nao" checked>
+                        <label for="nao">Não</label>
+                    </div>
+                    
+                </section>
+                <div>
+                    <h2>Ponto de Interesse da cidade:</h2>
+                    <div>
+                        <input id="MoinhoCastrolanda" type="radio" name="pontoInteresse">
+                        <label for="MoinhoCastrolanda">Moinho da Castrolanda</label>                 
                     </div>
                     <div>
-                        <input id="" type="radio" name="" >
-                        <label for="">Praça dos Cavaleiros</label><br>
+                        <input id="PracaCavaleiros" type="radio" name="pontoInteresse">
+                        <label for="PracaCavaleiros">Praça dos Cavaleiros</label>
                     </div>
                     <div>
-                        <input id="" type="radio" name="" >
-                        <label for="">Prainha</label><br>
+                        <input id="Prainha" type="radio" name="pontoInteresse">
+                        <label for="Prainha">Prainha</label>
                     </div>
                     <div>
-                        <input id="" type="radio" name="" >
-                        <label for="">Parque Lacustre</label><br>
+                        <input id="ParqueLacustre" type="radio" name="pontoInteresse">
+                        <label for="ParqueLacustre">Parque Lacustre</label>
                     </div>
                     <div>
-                        <input id="" type="radio" name="" >
-                        <label for="">Morro do Cristo</label>
+                        <input id="MorroCristo" type="radio" name="pontoInteresse">
+                        <label for="MorroCristo">Morro do Cristo</label>
                     </div>
                  </div>
                 <div>
-                    <label for="interesse"><h3>Qual o seu motivo para estar na cidade?</h3></label><br>
-                    <input id="interesse" type="checkbox" >
-                    <label for="">Turista</label><br>
-                    <input id="interesse" type="checkbox" >
-                    <label for="">Estudante</label><br>
-                    <input id="interesse" type="checkbox" >
-                    <label for="">Residente</label>
+                    <h2>Qual o seu motivo para estar na cidade?</h2>
+                    <div class="motivo">
+                        <input id="Turista" type="checkbox" name="interesse">
+                        <label for="Turista">Turista</label>
+                    </div>
+                    <div class="motivo">
+                        <input id="Estudante" type="checkbox" name="interesse">
+                        <label for="Estudante">Estudante</label>
+                    </div>
+                    <div class="motivo">
+                        <input id=">Residente" type="checkbox" name="interesse">
+                        <label for="Residente">Residente</label>
+                    </div>
                 </div>
-                <div>
-                    <input type="submit"> <input type="reset">
+                <div class="botoes">
+                    <input class="enviar" type="submit"> 
+                    <input class="resetar" type="reset">
                 </div>
+               
             </form>
         </article>
+        <div class="logoRodaPe">
+            <img src="./image/dhvisitform2.png" alt="logo">
+        </div>
     </main>
 </body>
 </html>
